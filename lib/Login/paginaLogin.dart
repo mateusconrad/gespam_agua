@@ -27,75 +27,94 @@ class _PaginaLoginState extends State<PaginaLogin> {
                         "images/login.jpg",
                       ),
                       fit: BoxFit.cover))),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              SizedBox(
-                height: 25,
-              ),
-              Image.asset(
-                "images/logo.png",
-              ),
-              Text(
-                "Gespam Água",
-                style: TextStyle(
-                  color: Colors.lightBlue,
+          SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                SizedBox(
+                  height: 50,
                 ),
-              ),
-              SizedBox(
-                height: 55,
-              ),
-              TextFormField(
-                controller: emailUsusario,
-                decoration: InputDecoration(
-                    filled: true,
-                    border: OutlineInputBorder(
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(24)),
-                        borderSide: BorderSide(color: Colors.indigo, width: 2)),
-                    prefixIcon: Icon(
-                      Icons.person,
-                      color: Colors.indigo,
-                    ),
-                    hintText: "Email",
-                    fillColor: Colors.black),
-              ), //selecione o município
-              TextFormField(
-                controller: senhaUsusario,
-                decoration: InputDecoration(
-                    filled: true,
-                    border: OutlineInputBorder(
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(24)),
-                        borderSide: BorderSide(color: Colors.indigo, width: 2)),
-                    prefixIcon: Icon(
-                      Icons.vpn_key,
-                      color: Colors.indigo,
-                    ),
-                    hintText: "Email",
-                    fillColor: Colors.black),
-              ),
-              EscolheMunicipio(),
-              RaisedButton(
-                child: Text(
-                  "ACESSAR",
-                  style: TextStyle(color: Colors.white),
+                Image.asset(
+                  "images/logo.png",
+                  width: 300,
                 ),
-                color: Colors.indigo,
-                onPressed: () => Navigator.pushReplacement(context,
-                    MaterialPageRoute(builder: (context) => HomePage())),
-              ),
-              RaisedButton(
-                child: Text(
-                  "Esqueci minha senha",
-                  style: TextStyle(color: Colors.white),
+                Text(
+                  "Gespam Água",
+                  style: TextStyle(
+                    color: Colors.lightBlue,
+                  ),
                 ),
-                color: Colors.indigo,
-                onPressed: () {},
-              ),
-              Text("Gespam Água 2.0")
-            ],
+                SizedBox(
+                  height: 105,
+                ),
+                TextFormField(
+                  controller: emailUsusario,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(24)),
+                          borderSide:
+                              BorderSide(color: Colors.indigo, width: 2)),
+                      prefixIcon: Icon(
+                        Icons.person,
+                        color: Colors.indigo,
+                      ),
+                      hintText: "Email",
+                      fillColor: Colors.black),
+                ), //selecione o município
+                SizedBox(
+                  height: 15,
+                ),
+                TextFormField(
+                  controller: senhaUsusario,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(24)),
+                          borderSide:
+                              BorderSide(color: Colors.indigo, width: 2)),
+                      prefixIcon: Icon(
+                        Icons.vpn_key,
+                        color: Colors.indigo,
+                      ),
+                      hintText: "Senha",
+                      fillColor: Colors.black),
+                ),
+                EscolheMunicipio(),
+                SizedBox(
+                  height: 25,
+                ),
+                RaisedButton(
+                  child: Text(
+                    "            Acessar            ",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  color: Colors.indigo,
+                  elevation: 24,
+                  onPressed: () => Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) => HomePage())),
+                ),
+                RaisedButton(
+                  child: Text(
+                    "Esqueci minha senha",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  elevation: 24,
+                  color: Colors.indigo,
+                  onPressed: () {},
+                ),
+                SizedBox(
+                  height: 25,
+                ),
+                Text(
+                  "Gespam Água v 2.0.0",
+                  style: TextStyle(
+                    color: Colors.grey,
+                  ),
+                )
+              ],
+            ),
           ),
 //
 
