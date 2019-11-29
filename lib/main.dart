@@ -7,6 +7,9 @@ void main() {
     home: PaginaLogin(),
     theme: ThemeData(
       brightness: Brightness.light,
+      appBarTheme: AppBarTheme(
+        color: Colors.indigo,
+      ),
     ),
   ));
 }
