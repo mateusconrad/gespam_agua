@@ -47,14 +47,11 @@ class _HomePageState extends State<HomePage> {
             child: Text("Iniciar Roteiro"),
             onPressed: () {},
           ),
-          RaisedButton(
+          FlatButton.icon(
             padding: _padding,
-            child: Text("Mapa do Roteiro"),
-            onPressed: () {},
-          ),
-          MaterialButton(
-            padding: _padding,
-            child: Text("Mapa do Roteiro"),
+            label: Text("Mapa do Roteiro"),
+            icon: Icon(Icons.map),
+//            child: ,
             onPressed: () {},
           ),
         ],
