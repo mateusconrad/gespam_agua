@@ -15,53 +15,92 @@ class _PaginaLoginState extends State<PaginaLogin> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Stack(
-      children: <Widget>[
-        Center(
-          child: Image.asset(
-            "images/login.jpg",
-            width: size.width,
-            height: size.height,
-            fit: BoxFit.fill,
+    return Scaffold(
+      body: Stack(
+        children: <Widget>[
+          Container(
+              decoration: new BoxDecoration(
+                  image: new DecorationImage(
+                      image: new AssetImage(
+                        "images/login.jpg",
+                      ),
+                      fit: BoxFit.cover))),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              SizedBox(
+                height: 25,
+              ),
+              Image.asset(
+                "images/logo.png",
+              ),
+              Text(
+                "Gespam Água",
+                style: TextStyle(
+                  color: Colors.lightBlue,
+                ),
+              ),
+              SizedBox(
+                height: 55,
+              ),
+              TextFormField(
+                controller: emailUsusario,
+                decoration: InputDecoration(
+                    filled: true,
+                    border: OutlineInputBorder(
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(24)),
+                        borderSide: BorderSide(color: Colors.indigo, width: 2)),
+                    prefixIcon: Icon(
+                      Icons.person,
+                      color: Colors.indigo,
+                    ),
+                    hintText: "Email",
+                    fillColor: Colors.black),
+              ), //selecione o município
+              TextFormField(
+                controller: senhaUsusario,
+                decoration: InputDecoration(
+                    filled: true,
+                    border: OutlineInputBorder(
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(24)),
+                        borderSide: BorderSide(color: Colors.indigo, width: 2)),
+                    prefixIcon: Icon(
+                      Icons.vpn_key,
+                      color: Colors.indigo,
+                    ),
+                    hintText: "Email",
+                    fillColor: Colors.black),
+              ),
+              RaisedButton(
+                child: Text(
+                  "ACESSAR",
+                  style: TextStyle(color: Colors.white),
+                ),
+                color: Colors.indigo,
+                onPressed: () => Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => HomePage())),
+              ),
+              RaisedButton(
+                child: Text(
+                  "Esqueci minha senha",
+                  style: TextStyle(color: Colors.white),
+                ),
+                color: Colors.indigo,
+                onPressed: () {},
+              ),
+              Text("Gespam Água 2.0")
+            ],
           ),
-        ),
-        Column(
-          children: <Widget>[
-            Image.asset("images/logo.png"),
-            Text("Gespam Água"), //selecione o município
-            TextFormField(
-              key: loginKey,
-              autofocus: true,
-              controller: senhaUsusario,
-              textInputAction: TextInputAction.next,
-            ),
-            TextFormField(
-              key: loginKey,
-              controller: senhaUsusario,
-              obscureText: true,
-            ),
-            RaisedButton(
-              child: Text(
-                "ACESSAR",
-                style: TextStyle(color: Colors.white),
-              ),
-              color: Colors.indigo,
-              onPressed: () {},
-            ),
-            RaisedButton(
-              child: Text(
-                "Esqueci minha senha",
-                style: TextStyle(color: Colors.white),
-              ),
-              color: Colors.indigo,
-              onPressed: () {
-                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> HomePage()));
-              },
-            ),
-            Text("Gespam Água 2.0")
-          ],
-        )
-      ],
+//
+
+//
+////          ],
+//        )
+        ],
+      ),
     );
   }
 }

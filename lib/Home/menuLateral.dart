@@ -3,6 +3,7 @@ import 'package:gespam_agua/Home/paginaHome.dart';
 import 'package:gespam_agua/Home/telasMenuLateral/digitacao.dart';
 import 'package:gespam_agua/Home/telasMenuLateral/hidrometros.dart';
 import 'package:gespam_agua/Home/telasMenuLateral/sincronizarDados.dart';
+import 'package:gespam_agua/Login/paginaLogin.dart';
 
 class MenuLateral extends StatefulWidget {
   @override
@@ -80,8 +81,8 @@ class _MenuLateralState extends State<MenuLateral> {
           Divider(),
           ListTile(
             leading: Icon(Icons.subdirectory_arrow_left),
-            title: Text("Bancos"),
-            onTap: () {},
+            title: Text("Sair"),
+            onTap: () => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> PaginaLogin())),
           ),
           Divider(),
         ],

@@ -6,7 +6,7 @@ void main() {
     debugShowCheckedModeBanner: false,
     home: PaginaLogin(),
     theme: ThemeData(
-      brightness: Brightness.dark,
+      brightness: Brightness.light,
     ),
   ));
 }
