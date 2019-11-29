@@ -15,6 +15,7 @@ class _PaginaLoginState extends State<PaginaLogin> {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_local_variable
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: Stack(

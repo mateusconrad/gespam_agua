@@ -6,7 +6,8 @@ class EscolheMunicipio extends StatefulWidget {
 }
 
 class _EscolheMunicipioState extends State<EscolheMunicipio> {
-  var _valueMunicipio;
+  // ignore: unused_field
+  var _valueMunicipio = "Demonstração";
 
   var _listaMunicipio = ["Demonstração", "Mato Queimado", "Novo Machado"];
 
