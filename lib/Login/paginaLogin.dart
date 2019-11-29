@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:gespam_agua/Home/paginaHome.dart';
+import 'package:gespam_agua/Login/dropDownMunicipio.dart';
 
 class PaginaLogin extends StatefulWidget {
   @override
@@ -74,6 +75,7 @@ class _PaginaLoginState extends State<PaginaLogin> {
                     hintText: "Email",
                     fillColor: Colors.black),
               ),
+              EscolheMunicipio(),
               RaisedButton(
                 child: Text(
                   "ACESSAR",
