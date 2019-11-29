@@ -56,7 +56,7 @@ class _MenuLateralState extends State<MenuLateral> {
           ),
           Divider(),
           ListTile(
-            leading: Icon(Icons.place),
+            leading: Icon(Icons.place,),
             title: Text("Poços"),
             onTap: () {},
           ),
