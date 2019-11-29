@@ -10,15 +10,12 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    EdgeInsetsGeometry _padding =
-        EdgeInsets.all(10);
+    EdgeInsetsGeometry _padding = EdgeInsets.all(10);
     return Scaffold(
       appBar: AppBar(
         title: Text("Gespam Água"),
-        backgroundColor: Colors.indigo,
-        //icone da prefe
+        //icone da prefe  - Image.Asset('${fotoprefeitura}')
       ),
-
       body: Center(
 //        width: 250,
         child: Column(
@@ -56,7 +53,6 @@ class _HomePageState extends State<HomePage> {
               icon: Icon(Icons.map),
               onPressed: () {},
             ),
-
           ],
         ),
       ),
