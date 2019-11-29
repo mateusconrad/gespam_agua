@@ -22,36 +22,34 @@ class _HomePageState extends State<HomePage> {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          RaisedButton(
+          FlatButton.icon(
+            icon: Icon(Icons.play_arrow),
             padding: _padding,
-            child: Text("Iniciar Roteiro"),
+            label: Text("Iniciar Roteiro"),
             onPressed: () {},
           ),
-          RaisedButton(
+          FlatButton.icon(
+            icon: Icon(Icons.dialpad),
             padding: _padding,
-            child: Text("Cadastro de Hidrômetros"),
+            label: Text("Cadastro de Hidrômetros"),
             onPressed: () {},
           ),
-          RaisedButton(
+          FlatButton.icon(
             padding: _padding,
-            child: Text("Sincronizar Dados"),
+            icon: Icon(Icons.cloud_download),
+            label: Text("Sincronizar Dados"),
             onPressed: () {},
           ),
-          RaisedButton(
+          FlatButton.icon(
             padding: _padding,
-            child: Text("Enviar Dados"),
-            onPressed: () {},
-          ),
-          RaisedButton(
-            padding: _padding,
-            child: Text("Iniciar Roteiro"),
+            icon: Icon(Icons.cloud_download),
+            label: Text("Enviar Dados"),
             onPressed: () {},
           ),
           FlatButton.icon(
             padding: _padding,
             label: Text("Mapa do Roteiro"),
             icon: Icon(Icons.map),
-//            child: ,
             onPressed: () {},
           ),
         ],
