@@ -16,6 +16,11 @@ class _MenuLateralState extends State<MenuLateral> {
     return Drawer(
       child: ListView(
         children: <Widget>[
+          Container(
+            padding: EdgeInsets.all(20),
+            child: Image.asset('images/logo.png'),
+          ),
+          Divider(),
           ListTile(
             leading: Icon(Icons.home),
             title: Text("Início"),
@@ -44,36 +49,6 @@ class _MenuLateralState extends State<MenuLateral> {
           ),
           Divider(),
           ListTile(
-            leading: Icon(Icons.dialpad),
-            title: Text("Hidrômetros"),
-            onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Hidrometros()));},
-          ),
-          Divider(),
-          ListTile(
-            leading: Icon(Icons.album),
-            title: Text("Distritos"),
-            onTap: () {},
-          ),
-          Divider(),
-          ListTile(
-            leading: Icon(Icons.place,),
-            title: Text("Poços"),
-            onTap: () {},
-          ),
-          Divider(),
-          ListTile(
-            leading: Icon(Icons.apps),
-            title: Text("Categorias"),
-            onTap: () {},
-          ),
-          Divider(),
-          ListTile(
-            leading: Icon(Icons.error_outline),
-            title: Text("Ocorrências"),
-            onTap: () {},
-          ),
-          Divider(),
-          ListTile(
             leading: Icon(Icons.monetization_on),
             title: Text("Bancos"),
             onTap: () {},
@@ -90,3 +65,34 @@ class _MenuLateralState extends State<MenuLateral> {
     );
   }
 }
+//          Divider(),
+//          ListTile(
+//            leading: Icon(Icons.dialpad),
+//            title: Text("Hidrômetros"),
+//            onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Hidrometros()));},
+//          ),
+////          Divider(),
+//          ListTile(
+//            leading: Icon(Icons.album),
+//            title: Text("Distritos"),
+//            onTap: () {},
+//          ),
+////          Divider(),
+//          ListTile(
+//            leading: Icon(Icons.place,),
+//            title: Text("Poços"),
+//            onTap: () {},
+//          ),
+//          Divider(),
+//          ListTile(
+//            leading: Icon(Icons.apps),
+//            title: Text("Categorias"),
+//            onTap: () {},
+//          ),
+////          Divider(),
+//          ListTile(
+//            leading: Icon(Icons.error_outline),
+//            title: Text("Ocorrências"),
+//            onTap: () {},
+//          ),
+////          Divider(),

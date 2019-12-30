@@ -14,6 +14,8 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Gespam Água"),
+        centerTitle: true,
+
         //icone da prefe  - Image.Asset('${fotoprefeitura}')
       ),
       body: Center(

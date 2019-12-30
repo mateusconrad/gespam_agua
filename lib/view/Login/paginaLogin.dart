@@ -32,19 +32,9 @@ class _PaginaLoginState extends State<PaginaLogin> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
-                SizedBox(
-                  height: 50,
-                ),
-                Image.asset(
-                  "images/logo.png",
-                  width: 300,
-                ),
-                Text(
-                  "Gespam Água",
-                  style: TextStyle(
-                    color: Colors.lightBlue,
-                  ),
-                ),
+                sBox1(),
+                logoGespam(),
+                textoagua("Gespam Água"),
                 SizedBox(
                   height: 105,
                 ),
@@ -61,12 +51,13 @@ class _PaginaLoginState extends State<PaginaLogin> {
                         color: Colors.indigo,
                       ),
                       hintText: "Email",
-                      fillColor: Colors.black),
+                      ),
                 ), //selecione o município
                 SizedBox(
                   height: 15,
                 ),
                 TextFormField(
+                  obscureText: true,
                   controller: senhaUsusario,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(
@@ -79,7 +70,7 @@ class _PaginaLoginState extends State<PaginaLogin> {
                         color: Colors.indigo,
                       ),
                       hintText: "Senha",
-                      fillColor: Colors.black),
+                      ),
                 ),
                 EscolheMunicipio(),
                 SizedBox(
@@ -124,5 +115,26 @@ class _PaginaLoginState extends State<PaginaLogin> {
         ],
       ),
     );
+  }
+
+  Text textoagua(String agua) {
+    return Text(agua,
+                style: TextStyle(
+                  color: Colors.lightBlue,
+                ),
+              );
+  }
+
+  Image logoGespam() {
+    return Image.asset(
+                "images/logo.png",
+                width: 300,
+              );
+  }
+
+  SizedBox sBox1() {
+    return SizedBox(
+                height: 50,
+              );
   }
 }
